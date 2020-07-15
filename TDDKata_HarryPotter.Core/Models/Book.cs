@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xunit;
 
-namespace TDDKata_HarryPotter.Tests
+namespace TDDKata_HarryPotter.Core.Models
 {
-    public class DiscountTests
+    public class Book
     {
+
     }
 }
