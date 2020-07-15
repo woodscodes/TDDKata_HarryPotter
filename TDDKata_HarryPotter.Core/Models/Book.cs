@@ -8,6 +8,9 @@ namespace TDDKata_HarryPotter.Core.Models
 {
     public class Book
     {
+        public string Isbn { get; set; }
+        public string Title { get; set; }
+        public decimal Price { get; set; }
 
     }
 }
