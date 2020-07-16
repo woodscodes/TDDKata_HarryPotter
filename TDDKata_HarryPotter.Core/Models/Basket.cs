@@ -9,5 +9,11 @@ namespace TDDKata_HarryPotter.Core.Models
     public class Basket
     {
         public List<Book> Items { get; set; }
+        public decimal Total { get; set; }
+
+        public Basket()
+        {
+            Items = new List<Book>();
+        }
     }
 }

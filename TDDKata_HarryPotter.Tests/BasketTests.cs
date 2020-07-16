@@ -19,12 +19,6 @@ namespace TDDKata_HarryPotter.Tests
         }
 
         [Fact]
-        public void ShouldProvideANewList()
-        {
-            var basket = new Basket();
-        }
-
-        [Fact]
         public void ShouldAddABook()
         {
             var basket = new Basket();
@@ -34,6 +28,20 @@ namespace TDDKata_HarryPotter.Tests
             basket.Items.Add(book);
 
             Assert.Equal(basket.Items.Count(), expectedNumberOfBooks);
+        }
+
+        [Fact]
+        public void ShouldProvideATotal()
+        {
+            var basket = new Basket();
+
+            basket.Items.Add(new Book { Isbn = "0-7475-3269-9", Price = 8.0m, Title = "Philosopher's Stone" });
+            basket.Items.Add(new Book { Isbn = "0-7475-3849-2", Price = 8.0m, Title = "Chamber of Secrets" });
+            basket.Items.Add(new Book { Isbn = "0-7475-4215-5", Price = 8.0m, Title = "Prisoner of Azkaban" });
+
+            var expectedTotal = 24.0m;
+
+            Assert.Equal(basket.Total, expectedTotal);
         }
     }
 }
