@@ -34,12 +34,12 @@ namespace TDDKata_HarryPotter.Tests
         public void ShouldProvideATotal()
         {
             var basket = new Basket();
+            var expectedTotal = 16.0m;
 
             basket.Items.Add(new Book { Isbn = "0-7475-3269-9", Price = 8.0m, Title = "Philosopher's Stone" });
             basket.Items.Add(new Book { Isbn = "0-7475-3849-2", Price = 8.0m, Title = "Chamber of Secrets" });
             basket.Items.Add(new Book { Isbn = "0-7475-4215-5", Price = 8.0m, Title = "Prisoner of Azkaban" });
-
-            var expectedTotal = 24.0m;
+            basket.Items.Remove(basket.Items.Where(b => b.Isbn == "0-7475-4215-5").FirstOrDefault());
 
             Assert.Equal(basket.Total, expectedTotal);
         }

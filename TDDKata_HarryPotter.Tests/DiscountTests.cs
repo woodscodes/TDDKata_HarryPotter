@@ -9,5 +9,6 @@ namespace TDDKata_HarryPotter.Tests
 {
     public class DiscountTests
     {
+
     }
 }
