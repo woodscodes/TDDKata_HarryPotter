@@ -11,5 +11,11 @@ namespace TDDKata_HarryPotter.Core.Models
 {
     public static class Discounter
     {
+        public static decimal Price(params int[] books)
+        {
+            var basket = new Basket(books);
+
+            return basket.Total;
+        }
     }
 }

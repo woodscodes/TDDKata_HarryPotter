@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Basket.cs" />
-    <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Discounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
