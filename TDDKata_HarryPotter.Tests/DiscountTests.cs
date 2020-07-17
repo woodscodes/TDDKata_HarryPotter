@@ -41,9 +41,34 @@ namespace TDDKata_HarryPotter.Tests
         }
 
         [Fact]
-        public void ShouldGive5DiscountOnTwoTheSame()
+        public void ShouldGive5DiscountOnTwoInSet()
         {
             Assert.Equal((8 * 2) * 0.95m, Discounter.Price(2, 1));
         }
+
+        [Fact]
+        public void ShouldGive5DiscountOnTwoInSetPlusOneWithNoDiscount()
+        {
+            Assert.Equal((8 * 2) * 0.95m + 8, Discounter.Price(1, 2, 1));
+        }
+
+        [Fact]
+        public void ShouldGive10DiscountOnThreeInSet()
+        {
+            Assert.Equal((8 * 3) * 0.9m, Discounter.Price(1, 2, 3));
+        }
+        
+        [Fact]
+        public void ShouldGive20DiscountOnFourInSet()
+        {
+            Assert.Equal((8 * 4) * 0.8m, Discounter.Price(1, 2, 3, 4));
+        }
+
+        [Fact]
+        public void ShouldGive25DiscountOnFiveInSet()
+        {
+            Assert.Equal((8 * 5) * 0.8m, Discounter.Price(1, 2, 3, 4, 5));
+        }
+
     }
 }
