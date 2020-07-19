@@ -67,11 +67,11 @@ namespace TDDKata_HarryPotter.Tests
         [Fact]
         public void ShouldGive25DiscountOnFiveInSet()
         {
-            Assert.Equal((8 * 5) * 0.8m, Discounter.Price(1, 2, 3, 4, 5));
+            Assert.Equal((8 * 5) * 0.75m, Discounter.Price(1, 2, 3, 4, 5));
         }
 
         [Fact]
-        public void ShouldProvide5DiscountsOnTwoSets()
+        public void ShouldProvide2x5DiscountsOnTwoSets()
         {
             Assert.Equal((2 * (8 * 2) * 0.95m), Discounter.Price(0, 0, 1, 1));
         }
