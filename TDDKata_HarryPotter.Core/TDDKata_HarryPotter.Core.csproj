@@ -44,6 +44,7 @@
     <Compile Include="Models\Basket.cs" />
     <Compile Include="Models\Discounter.cs" />
     <Compile Include="Models\Set.cs" />
+    <Compile Include="Models\SetManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
